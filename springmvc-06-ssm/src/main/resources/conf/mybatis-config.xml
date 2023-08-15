@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <properties resource=""/>
+
+    <settings>
+        <!--开启驼峰命名方式-->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!--延迟加载的全局开关。默认值是false不开启-->
+        <!--所有只要带有分步的，都采用延迟加载-->
+        <setting name="lazyLoadingEnabled" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <package name="com.szq.ssm.pojo"/>
+    </typeAliases>
+
+    <!--mybatis分页的拦截器
+  <plugins>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor"></plugin>
+    </plugins>-->
+    <mappers>
+        <package name="com.szq.ssm.mapper"/>
+    </mappers>
+</configuration>
